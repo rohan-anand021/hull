@@ -8,5 +8,39 @@ dependencies = [
     "kaggle>=1.7.4.5",
     "lightgbm>=4.6.0",
     "pandas>=2.3.2",
+    "ruff",
     "scikit-learn>=1.7.2",
 ]
+
+# --- Ruff Main Configuration ---
+[tool.ruff]
+select = ["E", "F", "I"]
+jupyter = true
+line-length = 88
+quote-style = "double"
+
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]  # Look in the current directory
+include = ["*"] # Include all packages found
